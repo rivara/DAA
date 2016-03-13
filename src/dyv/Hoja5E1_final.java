@@ -71,6 +71,7 @@ public class Hoja5E1_final {
 
 	public static void main(String[] args) {
 		int []vector={3,1,1,3,1,1};
+
 		int [] resultado;
 		resultado=eliminaRepetidos(vector, 0, vector.length-1); 
 		imprime(vector, "Vector entrada:");
