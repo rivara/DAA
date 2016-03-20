@@ -1,4 +1,4 @@
-package dyv;
+package DivideYVenceras;
 
 /*Implementa un algoritmo que devuelva true o false según si un vector está ordenado o no.
 2 5 8 12 15 21 22 24 24 27 true

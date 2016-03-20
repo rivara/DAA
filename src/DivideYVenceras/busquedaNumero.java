@@ -1,4 +1,4 @@
-package dyv;
+package DivideYVenceras;
 
 class busquedaNumero {
 	public static int buscarIndice(int v[], int inicio, int fin) {

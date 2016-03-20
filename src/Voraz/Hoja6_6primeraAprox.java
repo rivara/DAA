@@ -1,4 +1,4 @@
-package voraz;
+package Voraz;
 
 public class Hoja6_6primeraAprox {
 	public static void cambiarMonedas(int cantidad){

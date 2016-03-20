@@ -1,4 +1,4 @@
-package dyv;
+package DivideYVenceras;
 /*Ejercicio 3
 Se dice que una celda mij de una matriz es sumativa si mij = i + j ; también se dice que dicha
 celda es restativa si mij = i j

@@ -1,4 +1,4 @@
-package dyv;
+package DivideYVenceras;
 
 import java.util.ArrayList;
 //PRIMERA APROXIMACION

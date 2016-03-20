@@ -1,4 +1,4 @@
-package dyv;
+package DivideYVenceras;
 
 class MaximoMinimo
 {

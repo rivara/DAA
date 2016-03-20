@@ -1,4 +1,4 @@
-package dyv;
+package DivideYVenceras;
 
 /*Ejercicio 2
  Implementa un algoritmo que, dado un vector ordenado salvo en una de sus posiciones, que
