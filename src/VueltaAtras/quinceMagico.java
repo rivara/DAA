@@ -19,7 +19,7 @@ public class quinceMagico {
 	            solucion [paso]= intento;
 	            // comprueba que no se pase de 15
 	            if (es_factible (intento, paso, solucion)) {
-	            	//comprueba el numero de casillas maximo 3 (de 0 a 2)
+	            	//comprueba el numero de casillas maximo 3 (de 0 a 2)g
 	                if (paso!=2) {
 	                    imprimir (solucion);
 	                    exito=quinceMagico(paso+1, solucion);
