@@ -25,7 +25,7 @@ public class quinceMagico {
 	                    exito=quinceMagico(paso+1, solucion);
 	                }
 	                }else {
-	                	//si la suma es 15 
+	                	//si la suma es 15 t 
 	                	if(suma(solucion)==15){
 	                    exito=true;
 	                	}else{
