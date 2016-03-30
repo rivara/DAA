@@ -23,6 +23,7 @@ public class Hoja4E1 {
 			else {
 				int pos_1 = estaOrdenado(v, inicio, mitad);
 				int pos_2 = estaOrdenado(v, mitad + 1, fin);
+				//va haciendo las llamadas recursivas de "fusion"
 				if (pos_1 > pos_2)
 					return pos_1;
 				else
@@ -32,7 +33,7 @@ public class Hoja4E1 {
 	}
 
 	public static void main(String[] args) {
-		int arrayEntrada[] = { 1, 2, 8, 10, 20, 23, 24,25,21 }; // Este es el array
+		int arrayEntrada[] = { 1, 4, 5, 10, 23, 24 }; // Este es el array
 		int posicion_erronea = estaOrdenado(arrayEntrada, 0,
 				arrayEntrada.length - 1);
 		if (posicion_erronea == -1)

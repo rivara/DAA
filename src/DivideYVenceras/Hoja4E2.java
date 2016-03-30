@@ -37,7 +37,7 @@ public class Hoja4E2 {
 	}
 
 	public static void main(String[] args) {
-		int arrayEntrada[] = { 2, 4, 6, 8, 16, 12, 18, 20, 22, 24 }; 
+		int arrayEntrada[] = { 2, 4, 6, 8, 9,11,12}; 
 		int posicion = buscarDesordenado(arrayEntrada, 0,
 				arrayEntrada.length - 1);
 		System.out.println("Elemento desordenado esta en la posicion: " + posicion);

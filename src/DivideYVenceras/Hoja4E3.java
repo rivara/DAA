@@ -57,7 +57,9 @@ public class Hoja4E3 {
 	}
 
 	public static void main(String[] args) {
-		int arrayEntrada[][] = { { 0, -1, -2 }, { 1, 0, -1 } };
+
+	    int arrayEntrada[][]={{0,1,2},{1,2,3}}; //Este es el array de elementos 
+		//int arrayEntrada[][] = { { 0, -1, -2 }, { 1, 0, -1 } };
 		char r = analizarMatriz(arrayEntrada);
 		System.out.println("Tipo: " + r);
 
