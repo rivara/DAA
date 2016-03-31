@@ -1,5 +1,7 @@
+/////////////////
+//NO VISTO///////
+/////////////////
 package DivideYVenceras;
-
 class CifrasComunesRec
 {
 	 public static void main(String[] args)

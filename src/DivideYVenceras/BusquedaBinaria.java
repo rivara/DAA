@@ -1,12 +1,14 @@
+/////////////////
+//NO VISTO///////
+/////////////////
 package DivideYVenceras;
-
 class BusquedaBinaria
 {
  public static void main(String[] args)
  {
-	int arrayEntrada[]={ 1, 4, 5, 6, 123, 213, 234, 321}; 
+	int arrayEntrada[]={ 1, 5, 6, 123, 213, 234, 321}; 
 	int indice=-1;
-	indice=busquedaBinaria (arrayEntrada,4,0,arrayEntrada.length-1);
+	indice=busquedaBinaria (arrayEntrada,234,0,arrayEntrada.length-1);
  
 	  if(indice==-1)
 	  {
