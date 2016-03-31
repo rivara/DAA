@@ -28,8 +28,10 @@ public class Hoja4E3 {
 		if (filaInf == filaSup && colInf == colSup) {
 			if (colInf == 0 && colSup == 0)
 				return '0';
-			else if (m[filaInf][colInf] == filaInf + colInf)
+			else if (m[filaInf][colInf] == filaInf + colInf){
+				System.out.println('s');
 				return 's';
+			}
 			else if (m[filaInf][colInf] == filaInf - colInf)
 				return 'r';
 			else
