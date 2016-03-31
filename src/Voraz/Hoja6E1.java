@@ -1,16 +1,6 @@
 package Voraz;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * 
- * @author jvergara
- */
-public class CambioMoneda {
+public class Hoja6E1 {
 
     /**
      * @param args the command line arguments
@@ -41,11 +31,6 @@ public class CambioMoneda {
         System.out.println ("Total monedas: "+ totalmonedas_en_mano);
     }
 }
-
-
-
-
-
 
 
 

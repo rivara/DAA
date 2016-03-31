@@ -78,7 +78,7 @@ public class Mochila {
          if (ps[is[i]]<=p) {
              xs[is[i]] = (float)1.0;
          }else {
-             xs[is[i]] = (float)p/ps[is[i]];
+             xs[is[i]] = (float)p/ps[is[i]];// una X parte de ese objeto
          }
          p -= xs[is[i]]*ps[is[i]];
          b += xs[is[i]]*bs[is[i]];
@@ -110,9 +110,9 @@ public class Mochila {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int pesos [] = {10, 34, 15, 5, 3};
-        int beneficios [] = {3,2,3,2,4};
-        int capacidad_mochila = 50;
+        int pesos [] = {10, 34, 15, 5};
+        int beneficios [] = {3,2,3,2};
+        int capacidad_mochila = 10;
         mochilaMejoresObjetos2 (pesos, beneficios, capacidad_mochila);
         
     }

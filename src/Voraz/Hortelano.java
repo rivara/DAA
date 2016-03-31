@@ -11,9 +11,37 @@ public class Hortelano {
 	private static int N=5; //numero de huertas
 	private static int K=8; //maxima caducidad
 	private static int LIBRE=-1; //marca que no hay huerta asignada
+	
+	
+	//ppal
+		public static int [] soluVoraz(int h[][]){
+			int s[] = new int [K]; 
+			int c,j;
+			//inicializa solucion 
+			for (int i=0; i<K; i++){
+				s[i]=LIBRE; 
+			}
+			
+			for (int i=0; i<N; i++){
+				c=seleccionCandidato(h);
+				j=h[0][c]-1; // el dia n se anota en la posicion n-1 
+				quitarCandidato(h,c);
+				while ((j>0) && (s[j]!=LIBRE)){
+					j=j-1;
+				}
+				if ((j>=0)&& (s[j]==LIBRE))
+					s[j]=c;
+			}
+			return s; 
+		}
+
+	
+	
 	private static int seleccionCandidato(int h[][]){ 
+		//buscamos la maxima caducidad
 		int max=0;
 		for (int i=0;i<N;i++){ 
+			System.out.println(h[1][i] +"**");
 			if (h[1][i]>h[1][max])
 				max=i; 
 		}
@@ -22,27 +50,11 @@ public class Hortelano {
 	private static void quitarCandidato(int h[][], int c){ 
 		h[1][c]=-1; //-1 marca de no hay candidato
 	}
-	public static int [] soluVoraz(int h[][]){
-		int s[] = new int [K]; 
-		int c,j;
-		//inicializa solucion 
-		for (int i=0; i<K; i++){
-			s[i]=LIBRE; 
-		}
-		for (int i=0; i<N; i++){
-			c=seleccionCandidato(h);
-			j=h[0][c]-1; // el dia n se anota en la posicion n-1 
-			quitarCandidato(h,c);
-			while ((j>0) && (s[j]!=LIBRE)){
-				j=j-1;
-			}
-			if ((j>=0)&& (s[j]==LIBRE))
-				s[j]=c;
-		}
-		return s; 
-	}
-
+	
+	
 	public static void main (String args[]) {
+		//X maximo beneficio
+		//Y caducidad
 		int h[][] = {{3,8,2,3,1}, {1, 2, 5, 6, 4}};
 
 		int s[] = soluVoraz (h);
