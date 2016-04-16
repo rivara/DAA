@@ -16,16 +16,21 @@ public class SaltoDelCaballo {
         for (int intento=0; intento<8 && !exito; intento++) {
             int nuevaF = fila_actual + incrX[intento];
             int nuevaC = columna_actual + incrY[intento];
-            
+            //Exportable //es factible
             if ((nuevaF>=0 && nuevaF<dimension) && (nuevaC>=0 && nuevaC<dimension)) {
                 if (tablero[nuevaF][nuevaC] == 0) {
+                	//si es 0 lo meto ya que esa posicion es válida
                     tablero[nuevaF][nuevaC] = paso;
                     if (paso==dimension*dimension)
                         exito = true;
                     else {
                         exito = Resuelve (paso+1,nuevaF, nuevaC , tablero, dimension, incrX, incrY);
-                        if (!exito)
-                            tablero[nuevaF][nuevaC] = 0;
+                       //desmarca ese numero no es válido
+                       if (!exito){
+                           tablero[nuevaF][nuevaC] = 0;
+                           System.out.println("fracaso en iteracion*"+intento);
+                       } else
+                    	   System.out.println("par alante intento"+intento);
                     }
                }
             }

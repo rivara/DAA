@@ -1,4 +1,4 @@
-//SIN VER
+
 /*Supongamos que disponemos de n trabajadores y n tareas. Sea bij > 0 el coste de 
 asignarle el trabajo j al trabajador i. Una asignación de tareas puede ser expresada 
 como una asignación de los valores 0 ó 1 a las variables xij, donde 

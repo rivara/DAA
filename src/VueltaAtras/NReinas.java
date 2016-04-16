@@ -14,9 +14,10 @@ import java.util.Scanner;
 public class NReinas {
 
     public static boolean es_factible (int intento, int paso, int solucion[]) {
+    	
         for (int i = 0; i<=paso-1; i++) {
             if ((solucion[i]==solucion[paso]) || (Math.abs(solucion[i]-solucion[paso])==Math.abs(i-paso))){
-                return false;
+        		return false;
             }
         }
         return true;
@@ -31,8 +32,8 @@ public class NReinas {
             solucion [paso]= intento;
             if (es_factible (intento, paso, solucion)) {
                 if (paso!=dimension-1) {
-                    imprimir (solucion);
-                    String linea = leer.nextLine();
+                   // imprimir (solucion);
+                   // String linea = leer.nextLine();
                     exito=ReinasN (paso+1, solucion, dimension);
                 }else {
                     exito=true;
@@ -51,9 +52,7 @@ public class NReinas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         int solucion [];
-          
         Scanner leer = new Scanner(System.in);
         System.out.println("Dame la dimension del tablero MxM:");
         String linea = leer.nextLine();
