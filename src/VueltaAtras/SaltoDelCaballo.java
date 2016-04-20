@@ -19,18 +19,14 @@ public class SaltoDelCaballo {
             //Exportable //es factible
             if ((nuevaF>=0 && nuevaF<dimension) && (nuevaC>=0 && nuevaC<dimension)) {
                 if (tablero[nuevaF][nuevaC] == 0) {
-                	//si es 0 lo meto ya que esa posicion es válida
+                	//si es 0 lo meto ya que esa posicion es válida marco
                     tablero[nuevaF][nuevaC] = paso;
                     if (paso==dimension*dimension)
                         exito = true;
                     else {
                         exito = Resuelve (paso+1,nuevaF, nuevaC , tablero, dimension, incrX, incrY);
                        //desmarca ese numero no es válido
-                       if (!exito){
-                           tablero[nuevaF][nuevaC] = 0;
-                           System.out.println("fracaso en iteracion*"+intento);
-                       } else
-                    	   System.out.println("par alante intento"+intento);
+                      
                     }
                }
             }
