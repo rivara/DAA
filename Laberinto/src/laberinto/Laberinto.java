@@ -2,15 +2,21 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package VueltaAtras;
+package laberinto;
 
 import java.util.Scanner;
+
+/**
+ *
+ * @author jvergara
+ */
 public class Laberinto {
     private static boolean Resuelve (int paso, int fila_actual, int columna_actual, String [][] tablero, int dimension, int[] incrX, int[] incrY) {
         boolean exito = false;
         for (int intento=0; intento<4 && !exito; intento++) {
             int nuevaF = fila_actual + incrX[intento];
             int nuevaC = columna_actual + incrY[intento];
+            
             if ((nuevaF>=0 && nuevaF<dimension) && (nuevaC>=0 && nuevaC<dimension)) {
                 if (tablero[nuevaF][nuevaC].equals("S")) {
                     exito=true;
@@ -22,6 +28,7 @@ public class Laberinto {
                         tablero[nuevaF][nuevaC] =  " ";
                     }
                }
+                
             }
              
          }
@@ -46,8 +53,8 @@ public class Laberinto {
         int dimension = Integer.parseInt(linea);
     
         String[][] tablero = new String[dimension][dimension];
-        int[] incrX = new int[] { 0,-1,0, 1};
-        int[] incrY = new int[] { -1, 0,1, 0};
+        int[] incrX = new int[] { 1,-1,0, 0};
+        int[] incrY = new int[] { 0, 0,1, -1};
 
         for (int i= 0; i< dimension; i++)
             for (int j=0; j< dimension; j++)

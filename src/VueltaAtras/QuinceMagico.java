@@ -8,7 +8,7 @@ import java.util.Scanner;
 */
 
 
-public class quinceMagico {
+public class QuinceMagico {
 
 
 	 public static boolean quinceMagico (int paso, int solucion []) {

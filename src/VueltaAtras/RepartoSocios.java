@@ -1,9 +1,40 @@
 package VueltaAtras;
 import java.util.Scanner;
 
+/* Intento: equipo 1 o equipo2 true/false
+ * Etapa:longitud del array de jugadores
+ * Solucion:arrays de booleanos final (true, falses)
+ * */
 
 public class RepartoSocios {
-	public static boolean es_factible (int cosas[], int solucion[], int etapa, int intento) {
+
+	
+//MAIN
+	public static boolean BT (int cosas[], int solucion[], int etapa) {
+		boolean exito = false;
+		for (int intento =1; intento<=2 && !exito ; intento++) {
+		
+			//es_factible implementa tambien el motodo solucion 
+			if (es_factible (cosas, solucion, etapa, intento)) { 
+				//marca
+				solucion[etapa]=intento;						
+				if (etapa == cosas.length-1) {
+					exito = true;
+				}else {
+					exito = BT (cosas, solucion, etapa+1);
+					if (!exito) {
+						//desmarca
+						solucion[etapa]=0; 
+					}
+				}
+			}
+		}
+		return exito;
+	}
+
+	
+	
+public static boolean es_factible (int cosas[], int solucion[], int etapa, int intento) {
 		int total = 0;
 		int asignado_socio1 = 0;
 		int asignado_socio2 = 0;
@@ -29,71 +60,47 @@ public class RepartoSocios {
 		
 		return true;
 		
-		
 	}
-	public static boolean BT (int cosas[], int solucion[], int etapa) {
-		boolean exito = false;
-		for (int intento =1; intento<=2 && !exito ; intento++) {
-			if (es_factible (cosas, solucion, etapa, intento)) { //etapa= el objeto
-				solucion[etapa]=intento;						//intento= a quién se lo das
-				if (etapa == cosas.length-1) {
-					exito = true;
-				}else {
-					exito = BT (cosas, solucion, etapa+1);
-					if (!exito) {
-						solucion[etapa]=0; 
-					}
-				}
-			}
-		}
-		return exito;
-		
-	}
+
+
+/*
 	public static void BTTodas (int cosas[], int solucion[], int etapa) {
-		//Scanner in = new Scanner (System.in);
-		
 		for (int intento =1; intento<=2  ; intento++) {
 			if (es_factible (cosas, solucion, etapa, intento)) { //etapa= el objeto
-				solucion[etapa]=intento;	//intento= a quién se lo das
-				//imprimir (solucion);
-				//in.nextLine();
-				if (etapa == cosas.length-1) {
-					imprimir (solucion);
-				}else {
-					BTTodas (cosas, solucion, etapa+1);
-				}
+				solucion[etapa]=intento;	
+				//intento= A qui�n se lo das
+				BTTodas (cosas, solucion, etapa+1);
 				solucion[etapa]=0; 
 			}
 		}
 		
-	}
+	}*/
+
 	public static void imprimir (int solucion []) {
 		for (int i=0; i<solucion.length; i++) {
 			System.out.println ("Objeto: "+i+" =>"+solucion[i]);
 		}
 	}
+	
+	
+	
+	
 	public static void main (String args[]) {
 		System.out.println ("Reparto de socios");
 		int cosas [] = {40,20,25,5,10};
 		int solucion[] = new int[cosas.length];
 		
-		/*
+
 		boolean exito = BT (cosas, solucion, 0);
 		if (exito) {
 			imprimir (solucion);
 		}else {
 			System.out.println ("No se puede hacer un reparto justo");
 		}
-		*/
-		BTTodas (cosas, solucion, 0);
+
+		//BTTodas (cosas, solucion, 0);
 	}
 }
-
-
-
-
-
-
 
 
 
