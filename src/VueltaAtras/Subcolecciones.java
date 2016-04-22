@@ -1,4 +1,5 @@
 package VueltaAtras;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -18,7 +19,7 @@ public class Subcolecciones {
 			
 			//Cuantos me quedan por seleccionar?
 			int quedan = m-cont_seleccionados;
-			//Cuantos candidatos quedarÃ­an para coger despuÃ©s de esta etapa?
+			//Cuantos candidatos quedarían para coger después de esta etapa?
 			int candidatos = usados.length - (etapa+1);
 			
 			if (candidatos>=quedan)
