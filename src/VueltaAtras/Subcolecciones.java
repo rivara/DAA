@@ -1,6 +1,8 @@
 package VueltaAtras;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -102,17 +104,18 @@ public class Subcolecciones {
 			mostrar(sol,c);
 		}
 	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		BufferedReader cin = new BufferedReader(new InputStreamReader(System.in));
+public static void main(String[] args) throws FileNotFoundException {
+		FileReader fr = new FileReader("C:\\entrada.txt");
+		BufferedReader cin = new BufferedReader(fr);
 		int n=0; 
 		int m=0; 
 		try {
-			n= Integer.parseInt(cin.readLine());
+			String text=cin.readLine().replace(" ","");
+			n=  Integer.parseInt(text);//Integer.parseInt(cin.readLine());
 			String[] numeros = cin.readLine().split(" ");
 			int []c = new int[n];
 			boolean []usados = new boolean[n];
-			for (int i=0; i<n; i++) {
+			for (int i=0; i<numeros.length; i++) {
 				c[i] = Integer.parseInt (numeros[i]);
 				usados[i] = false;
 			}
