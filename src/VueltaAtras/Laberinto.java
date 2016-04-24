@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Laberinto {
     private static boolean Resuelve (int paso, int fila_actual, int columna_actual, String [][] tablero, int dimension, int[] incrX, int[] incrY) {
         boolean exito = false;
-        for (int intento=0; intento<4 && !exito; intento++) {
+        for (int intento=0; intento<4  ;intento++) {
             int nuevaF = fila_actual + incrX[intento];
             int nuevaC = columna_actual + incrY[intento];
             if ((nuevaF>=0 && nuevaF<dimension) && (nuevaC>=0 && nuevaC<dimension)) {
