@@ -56,8 +56,16 @@ public class VectorOrdenado {
 
         if (etapa==0)
         	return (usados[intento]==false);
-        else
-			return ((usados[intento]==false) && (solucion[etapa-1]<vector[intento]));
+        else{
+        	System.out.println(solucion[etapa-1]+" "+vector[intento]);
+        	boolean v=((usados[intento]==false) && (solucion[etapa-1]<vector[intento]));
+        	if(v==true){
+        		imprimir(solucion);
+        		//System.out.println(usados[intento]+" "+solucion[etapa-1]+" "+vector[intento]);
+        		//System.out.println((usados[intento]==false)+"*"+(solucion[etapa-1]<vector[intento]));
+        	}
+			return v;
+        }
     }
     
    

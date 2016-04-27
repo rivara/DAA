@@ -1,4 +1,5 @@
 package VueltaAtras;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -89,7 +90,8 @@ public class SurvoPuzzle {
                 }else{
                     int sigX = dameSigX (filaActual, columnaActual, N, M);
                     int sigY = dameSigY (filaActual, columnaActual, N, M);
-                    //imprimir (tablero);
+                    imprimir (tablero);
+                    System.out.println("****");
                     //sc.nextLine();
                     exito = resuelveBT(sigX, sigY, tablero, N, M);
                 } 
