@@ -1,8 +1,4 @@
-package VueltaAtras;
-
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -21,7 +17,7 @@ public class Subcolecciones {
 			
 			//Cuantos me quedan por seleccionar?
 			int quedan = m-cont_seleccionados;
-			//Cuantos candidatos quedarían para coger después de esta etapa?
+			//Cuantos candidatos quedarÃ­an para coger despuÃ©s de esta etapa?
 			int candidatos = usados.length - (etapa+1);
 			
 			if (candidatos>=quedan)
@@ -104,29 +100,23 @@ public class Subcolecciones {
 			mostrar(sol,c);
 		}
 	}
-public static void main(String[] args) throws FileNotFoundException {
-		FileReader fr = new FileReader("C:\\entrada.txt");
-		BufferedReader cin = new BufferedReader(fr);
+	public static void main(String[] args)  {
+		// TODO Auto-generated method stub
+		BufferedReader cin = new BufferedReader(new InputStreamReader(System.in));
 		int n=0; 
 		int m=0; 
 		try {
-			/*String text=cin.readLine().replace(" ","");
-			n=  Integer.parseInt(text);//Integer.parseInt(cin.readLine());
+			n= Integer.parseInt(cin.readLine());
 			String[] numeros = cin.readLine().split(" ");
 			int []c = new int[n];
-			boolean []usados = new boolean[n];*/
-			//n= Integer.parseInt(cin.readLine());
-			String[] numeros = cin.readLine().split(" ");
-			int []c = new int[numeros.length];
-			boolean []usados = new boolean[numeros.length];
-			for (int i=0; i<numeros.length; i++) {
+			boolean []usados = new boolean[n];
+			for (int i=0; i<n; i++) {
 				c[i] = Integer.parseInt (numeros[i]);
 				usados[i] = false;
 			}
 			Arrays.sort (c);
 			
-			//m= Integer.parseInt(cin.readLine());
-			m = numeros.length;
+			m= Integer.parseInt(cin.readLine());
 			
 			
 			//Se le pasa: 

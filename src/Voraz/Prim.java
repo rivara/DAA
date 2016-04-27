@@ -1,4 +1,3 @@
-//SIN VER
 package Voraz;
 
 public class Prim {
@@ -16,16 +15,18 @@ public class Prim {
       for (int i=1; i<grafo.length; i++) {
          masProx[i] = 0;
          distMin[i] = grafo[i][0];
+
       }
       // bucle voraz
       for (int i=0; i<grafo.length-1; i++) {
          // se selecciona nodo más cercano al ARM ya formado. Con menos distancia.
          int min = 1000;
          int k = 0;
-         for (int j=1; j<grafo.length; j++) 
+         for (int j=1; j<grafo.length; j++) {
             if ((0<=distMin[j]) && (distMin[j]<min)) {
                min = distMin[j];
                k = j;
+            }
             }
          // se añade el arco al nodo k al ARM
          orig[i] = masProx[k];
@@ -33,11 +34,13 @@ public class Prim {
          distMin[k] = -1; // Se marca a -1 para que nunca mas sea seleccionado.
          
          // se actualizan distancias mínimas desde ese nuevo K alcanzado a los demas nodos.
-         for (int j=1; j<grafo.length; j++)
+         for (int j=1; j<grafo.length; j++){    	 
             if (grafo[j][k]<distMin[j]) {
                distMin[j] = grafo[j][k];
                masProx[j] = k;
             }
+         
+      }
       }
       
       int coste = 0;
