@@ -13,8 +13,8 @@ import java.util.Scanner;
  */
 public class LaberintoV2_0 {
     private static void Resuelve (int paso, int fila_actual, int columna_actual, String [][] tablero, int dimension, int[] incrX, int[] incrY, String [][] mejor_tablero, int []pasos_mejor) {
-        //if (paso>pasos_mejor[0])
-          //  return;
+       /* if (paso>pasos_mejor[0])
+            return;*/
 
         for (int intento=0; intento<4; intento++) {
             int nuevaF = fila_actual + incrX[intento];

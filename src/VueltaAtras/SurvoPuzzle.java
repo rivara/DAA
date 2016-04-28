@@ -91,7 +91,7 @@ public class SurvoPuzzle {
                     int sigX = dameSigX (filaActual, columnaActual, N, M);
                     int sigY = dameSigY (filaActual, columnaActual, N, M);
                     imprimir (tablero);
-                    System.out.println("****");
+                    System.out.println();
                     //sc.nextLine();
                     exito = resuelveBT(sigX, sigY, tablero, N, M);
                 } 
