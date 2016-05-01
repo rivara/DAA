@@ -1,6 +1,7 @@
 package VueltaAtras;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -13,7 +14,7 @@ public class Pasteleros {
 	
 	public static int cota = 0;
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		int n=0, m=0;
 		int datos_pasteleros [][] =null;
 		int pasteles [] = null;
@@ -23,11 +24,14 @@ public class Pasteleros {
 		
 		
 		//PASO 1: Leemos los datos del fichero de entrada
-		File f = new File(args[0]);
-		
+		//File f = new File(args[0]);
+		String archivo="C:/ECLIPSE/WS_EDA_URJC/pasteleros/src/entrada.in";
+	      FileReader fi = new FileReader(archivo);
+	      BufferedReader b = new BufferedReader(fi);
+	      
     	BufferedReader entrada;
     	try {
-    		entrada = new BufferedReader( new FileReader( f ) );
+    		entrada = new BufferedReader(fi);
     		String linea = entrada.readLine();
     		String trozos[] = linea.split(" ");
     		n= Integer.parseInt (trozos[0]);

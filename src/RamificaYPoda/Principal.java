@@ -2,6 +2,7 @@ package RamificaYPoda;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -44,7 +45,7 @@ public class Principal {
 		return hijos;
 	}
 	
-	public static void main (String args[]) {
+	public static void main (String args[]) throws FileNotFoundException {
 		int n=0, m=0;
 		int datos_pasteleros [][] =null;
 		int pasteles [] = null;
@@ -53,11 +54,14 @@ public class Principal {
 		
 	
 		//PASO 1: Leemos los datos del fichero de entrada
-		File f = new File(args[0]);
+		//File f = new File(args[0]);
+		String archivo="C:/ECLIPSE/WS_EDA_URJC/pasteleros/src/entrada.in";
+	      FileReader fi = new FileReader(archivo);
+	      BufferedReader b = new BufferedReader(fi);
 		
 		BufferedReader entrada;
 		try {
-			entrada = new BufferedReader( new FileReader( f ) );
+			entrada = new BufferedReader( fi );
 			String linea = entrada.readLine();
 			String trozos[] = linea.split(" ");
 			//n son los pasteleros y las filas
@@ -83,7 +87,8 @@ public class Principal {
 			e.printStackTrace();
 		}
 		//PASO 2: Selecccionamos una solucion valida pero que no tiene porque ser la mejor
-    	//La usaremos como cota inicial. En nuestro caso tomamos un pastelero para hacer cada pastel secuencialmente
+    	//La usaremos como cota inicial.
+		//En nuestro caso tomamos un pastelero para hacer cada pastel secuencialmente
     	int cota_superior = 0;
     	
     	for (int i=1; i<n+1; i++) { //Son n pasteles
