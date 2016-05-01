@@ -1,5 +1,4 @@
-/////////////////
-//NO VISTO///////
+
 /////////////////
 package DivideYVenceras;
 class CifrasComunesRec

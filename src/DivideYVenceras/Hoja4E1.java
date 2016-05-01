@@ -18,16 +18,23 @@ public class Hoja4E1 {
 			}
 		} else {
 			int mitad = (inicio + fin) / 2;
+			
 			if ((v[mitad] < v[mitad - 1]) || (v[mitad + 1] < v[mitad]))
 				return mitad;
 			else {
 				int pos_1 = estaOrdenado(v, inicio, mitad);
 				int pos_2 = estaOrdenado(v, mitad + 1, fin);
 				//va haciendo las llamadas recursivas de "fusion"
-				if (pos_1 > pos_2)
+				
+				if (pos_1 > pos_2){
+					System.out.println("1");
 					return pos_1;
-				else
+					
+				}else{
+					System.out.println("2");
 					return pos_2;
+					
+				}
 			}
 		}
 	}

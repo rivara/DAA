@@ -1,12 +1,11 @@
 package VueltaAtras;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
 
-public class PastelerosBT {
+public class Pasteleros {
 
 	/**
 	 * @param args
@@ -103,7 +102,7 @@ public class PastelerosBT {
 		}
 		return mejor_pastelero;
 	}
-	public static int calcular_cota_superior (int datos_pasteleros[][], int pasteles[], int solucion_parcial [], int etapa, int n, int m) {
+	public static int calcular_cota (int datos_pasteleros[][], int pasteles[], int solucion_parcial [], int etapa, int n, int m) {
 		int coste = 0;
 		
 		//Calculamos real
@@ -112,7 +111,7 @@ public class PastelerosBT {
 		}
 		//Calculamos lo que queda por asignar considerando algo muy muy bueno aunque sea imposible. Por ejemplo, asignar el mejor de los costes que la tabla
 		//Cuando mas mejoremos la cota mejor sera nuestra poda
-		//Es como calcula: Como mucho, a cuando de beneficio podría llegar esto
+		//Es como calcula: Como mucho, a cuando de beneficio podrÃ­a llegar esto
 		for (int i=etapa+1; i<=n;i++) {
 			//Dame el mejor pastelero para ese tipo de pastel, aunque este ocupado
 			int mejor_para_ese_pastel = dame_mejor (datos_pasteleros, pasteles[i],n);
@@ -127,7 +126,7 @@ public class PastelerosBT {
 			if (es_factible (solucion_parcial, intento)) { //Miramos si en nuestra solucion no esta ya el pastelero ocupado
 				//Marcamos 
 				solucion_parcial [etapa] = intento;
-				if (calcular_cota_superior (datos_pasteleros, pasteles, solucion_parcial, etapa, n, m)>=cota) { //Si pasa la poda
+				if (calcular_cota (datos_pasteleros, pasteles, solucion_parcial, etapa, n, m)>=cota) { //Si pasa la poda
 					if (n==etapa) { //Es solucion y es mejor o igual, nos quedamos con ella y actualizamos cota
 						//Si hacemos solucion_mejor = solucion_parcial no vale porque solo apuntamos referencias
 						CopiarSolucion (solucion_parcial, solucion_mejor);
