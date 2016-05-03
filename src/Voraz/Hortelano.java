@@ -41,7 +41,6 @@ public class Hortelano {
 		//buscamos la maxima caducidad
 		int max=0;
 		for (int i=0;i<N;i++){ 
-			System.out.println(h[1][i] +"**");
 			if (h[1][i]>h[1][max])
 				max=i; 
 		}

@@ -1,10 +1,18 @@
-//SIN VER
-package Voraz;
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dijkstra;
+
+/**
+ *
+ * @author jvergara
+ */
 public class Dijkstra {
     
     public static int[] Dijkstra1 (int[][] grafo, int origen) {
         
-      // calcula las longitudes de los caminos mínimos
+      // calcula las longitudes de los caminos mÃ­nimos
       // conjunto de candidatos, con todos los nodos salvo el origen
       boolean[] candidatos = new boolean[grafo.length];
       for (int i=0; i<candidatos.length; i++)
@@ -19,7 +27,7 @@ public class Dijkstra {
       
       
       distancias[origen] = 0;
-      // iteración para todos los candidatos
+      // iteraciÃ³n para todos los candidatos
       for (int i=0; i<grafo.length-1; i++) {
          // se busca un primer candidato que todavia no tengamos su distancia definitiva
          int j;
@@ -34,7 +42,7 @@ public class Dijkstra {
          //Ya no le vamos a tratar mas asi es que a false
          candidatos[menor] = false;
          
-         // se actualizan las distancias mínimas que pasan por el nuevo candidato
+         // se actualizan las distancias mÃ­nimas que pasan por el nuevo candidato
          for (j=0; j<candidatos.length; j++) {
             if (candidatos[j])
                distancias[j] = Math.min (distancias[j], distancias[menor]+grafo[menor][j]);
@@ -45,7 +53,7 @@ public class Dijkstra {
    }
     
      public static int[] Dijkstra2 (int[][] grafo, int origen) {
-      // calcula las longitudes de los caminos mínimos y los propios caminos mínimos
+      // calcula las longitudes de los caminos mÃ­nimos y los propios caminos mÃ­nimos
       // conjunto de candidatos, con todos los nodos salvo el origen
       boolean[] candidatos = new boolean[grafo.length];
       for (int i=0; i<candidatos.length; i++)
@@ -60,19 +68,19 @@ public class Dijkstra {
       }
       distancias[origen] = 0;
       predecesores[origen] = 0;
-      // iteración para cada candidato
+      // iteraciÃ³n para cada candidato
       for (int i=0; i<grafo.length-1; i++) {
          // se busca un primer candidato
          int j;
          for (j=0; (j<candidatos.length) && !(candidatos[j]); j++) {}
          int menor = j;
-         // se busca el candidato más cercano al origen
+         // se busca el candidato mÃ¡s cercano al origen
          for (; j<candidatos.length; j++) {
             if ((candidatos[j]) && (distancias[j]<distancias[menor]))
                menor = j;
          }
          candidatos[menor] = false;
-         // se actualizan las distancias mínimas que pasan por el nuevo candidato
+         // se actualizan las distancias mÃ­nimas que pasan por el nuevo candidato
          for (j=0; j<candidatos.length; j++) {
             if (candidatos[j])
                if (distancias[menor]+grafo[menor][j]<distancias[j]) {
