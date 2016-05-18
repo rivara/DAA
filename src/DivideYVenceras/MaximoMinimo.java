@@ -1,5 +1,4 @@
 
-/////////////////
 package DivideYVenceras;
 class MaximoMinimo
 {
@@ -32,21 +31,21 @@ class MaximoMinimo
 			for (int i=0; i<n2; i++){
 				aux2[i] = a[n+i];
 			}
-			
 		
+		    System.out.println(a[n]+" "+a[n2]);
 		
 			mym (aux1, result_1);
 			mym (aux2, result_2);
 			
 			//identifica al menor
-			if (result_1[0]>result_2[0])
+			if (result_1[0]>result_2[0]){
 				result[0] = result_1[0];
-			else
+			}else
 				result[0] = result_2[0];
 			//identica al mayor
-			if (result_1[1]<result_2[1])
+			if (result_1[1]<result_2[1]){
 				result[1] = result_1[1];
-			else
+			}else
 				result[1] = result_2[1];
 			
 		}else {
