@@ -1,6 +1,4 @@
-/////////////////
-//NO VISTO///////
-/////////////////
+
 package DivideYVenceras;
 
 public class MergeSort {
@@ -9,13 +7,25 @@ public class MergeSort {
 
 
     public static void main(String args[]){
-       int arrayEntrada[]={321, 123, 213, 234, 1, 4, 5, 6}; //Este es el array de elementos que vamos a ordenar
-
+     //  int arrayEntrada[]={321, 123, 213, 234, 1, 4, 5, 6}; //Este es el array de elementos que vamos a ordenar
+    	int arrayEntrada[]={8, 9, 0, 1, 4, 5, 6};
+    	
+        for (int i=0;i < arrayEntrada.length;i++){ //Este bucle imprime el contenido del array
+            System.out.print(arrayEntrada[i]+" ");
+         }//fin del for
+     
+        System.out.println("--");
+    
        mergeSort(arrayEntrada); //llamada al metodo mergeSort 
        for (int i=0;i < arrayEntrada.length;i++){ //Este bucle imprime el contenido del array
           System.out.print(arrayEntrada[i]+" ");
        }//fin del for
      }//fin del main
+    
+   
+
+    
+    
      
     public static void mergeSort( int a[ ]){
       
@@ -39,9 +49,11 @@ public class MergeSort {
         int leftEnd = rightPos - 1;
         int tmpPos = leftPos;
         int numElements = rightEnd - leftPos + 1;
+       // System.out.println(leftEnd+" "+tmpPos+" "+numElements);
 
         // Main loop
         while( leftPos <= leftEnd && rightPos <= rightEnd ){
+        
             if( a[ leftPos ]<( a[ rightPos ] ) ){
                 tmpArray[ tmpPos ] = a[ leftPos ];
                 tmpPos++;

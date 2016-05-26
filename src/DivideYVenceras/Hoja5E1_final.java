@@ -34,7 +34,7 @@ public class Hoja5E1_final {
 		while ((i<v1.length) && (j<v2.length)){
 			if (v1[i] < v2[j]){ 
 				resul[k]=v1[i];
-				k=k+1;
+				k++;
 				i++; 
 			}else{
 				if (v1[i] > v2[j]){ 

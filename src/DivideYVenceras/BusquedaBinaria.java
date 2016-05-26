@@ -1,7 +1,8 @@
+package DivideYVenceras;
 /////////////////
 //NO VISTO///////
 /////////////////
-package DivideYVenceras;
+
 class BusquedaBinaria
 {
  public static void main(String[] args)
