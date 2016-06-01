@@ -1,8 +1,4 @@
 package DivideYVenceras;
-/////////////////
-//NO VISTO///////
-/////////////////
-
 class BusquedaBinaria
 {
  public static void main(String[] args)

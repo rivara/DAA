@@ -13,7 +13,8 @@ public class Laberinto {
             int nuevaC = columna_actual + incrY[intento];
             if ((nuevaF>=0 && nuevaF<dimension) && (nuevaC>=0 && nuevaC<dimension)) {
                 if (tablero[nuevaF][nuevaC].equals("S")) {
-                    exito=true;
+                  // exito=true;
+                	  imprimir (tablero);
                 }else if (tablero[nuevaF][nuevaC].equals(" ")) {
                     String numero = Integer.toString (paso);
                     tablero[nuevaF][nuevaC] = numero;
@@ -28,12 +29,25 @@ public class Laberinto {
       return exito;
    }
 
-    private static void imprimir (String [][] tablero) {
+    private static void imprimir2 (String [][] tablero) {
         for (int i=0; i<tablero.length; i++) {
             for (int j=0; j<tablero.length; j++)
                 System.out.print (tablero[i][j]+"  ");
          System.out.println();
         }
+    }
+    private static void imprimir (String [][] tablero) {
+        for (int i=0; i<tablero.length; i++) {
+            for (int j=0; j<tablero.length; j++) {
+				if (tablero[i][j].length ()==2)
+					System.out.print (tablero[i][j]+"  ");
+				else
+					System.out.print (tablero[i][j]+"   ");
+			}
+         System.out.println();
+        }
+        Scanner sc = new Scanner (System.in);
+        sc.nextLine ();
     }
     /**
      * @param args the command line arguments
