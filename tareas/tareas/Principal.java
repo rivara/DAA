@@ -1,3 +1,4 @@
+package tareas;
 
 
 import java.io.BufferedReader;
@@ -16,7 +17,7 @@ public class Principal {
 		}
 		return true;
 	}
-
+}
 /*	public static ArrayList<Nodo> getComplecciones(Nodo padre, int n, int m) {
 		ArrayList<Nodo> hijos = new ArrayList<Nodo>();
 

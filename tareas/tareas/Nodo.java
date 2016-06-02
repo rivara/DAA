@@ -1,3 +1,4 @@
+package tareas;
 
 public class Nodo implements Comparable {
 	int n = 0, m = 0;

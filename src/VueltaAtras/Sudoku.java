@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package sudoku;
+package VueltaAtras;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -156,7 +156,7 @@ public class Sudoku {
      */
     public static void main(String[] args) throws IOException {
     	  String cadena;
-    	  FileReader f = new FileReader("C://ECLIPSE//WS_EDA_URJC//sudoku_//src//sudoku//entrada.txt");
+    	  FileReader f = new FileReader("C://entrada.txt");
           BufferedReader b = new BufferedReader(f);
          /* while((cadena = b.readLine())!=null) {
               System.out.println(cadena);
