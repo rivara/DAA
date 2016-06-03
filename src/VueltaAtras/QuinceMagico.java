@@ -38,7 +38,7 @@ public class QuinceMagico {
     }
     
     public static boolean esPosible(int fila, int columna, int[][] tablero, int intento){
-        boolean ok = true;
+      /*  boolean ok = true;
         int aux = 0;
         //fila correcta
         
@@ -92,7 +92,8 @@ public class QuinceMagico {
         }
         
         
-        return ok;
+        return ok;*/
+    	return true;
     }
     
     public static int columnaSiguiente(int fila, int columna){
