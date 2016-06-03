@@ -107,7 +107,7 @@ public class Jugadores_BT {
 	public static void main(String[] args) {
 		// meto un arry de jugadores (pares)
 		// las estadistica de juegos
-		int jugadores[] = { 1, 4, 3, 2 };
+		int jugadores[] = { 7, 4, 8, 2 };
 		// llamada a jugadores
 		jugadoresBT(jugadores);
 

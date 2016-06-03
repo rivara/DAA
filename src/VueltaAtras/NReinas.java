@@ -11,7 +11,7 @@ public class NReinas {
 		Scanner leer = new Scanner(System.in);
 
 		boolean exito = false;
-		solucion[paso] = -1; // No esta colocada
+		//solucion[paso] = -1; // No esta colocada
 		for (int intento = 0; intento < dimension && !exito; intento++) {
 			solucion[paso] = intento;
 			if (es_factible(intento, paso, solucion)) {
