@@ -13,7 +13,7 @@ public class Laberinto {
             int nuevaC = columna_actual + incrY[intento];
             if ((nuevaF>=0 && nuevaF<dimension) && (nuevaC>=0 && nuevaC<dimension)) {
                 if (tablero[nuevaF][nuevaC].equals("S")) {
-                  // exito=true;
+                   exito=true;
                 	  imprimir (tablero);
                 }else if (tablero[nuevaF][nuevaC].equals(" ")) {
                     String numero = Integer.toString (paso);
