@@ -22,8 +22,8 @@ public class QuinceMagico {
             tablero[fila][columna] = x;//marcar
             if(esPosible(fila, columna, tablero, x)){
                 
-                if(columna == 2 && fila == 2){
-                    imprimirTablero(tablero);
+               if(columna == 2 && fila == 2){
+                 //   imprimirTablero(tablero);
                 }else{
                     int nextCol = columnaSiguiente(fila, columna);
                     int nextFil = filaSiguiente(fila, columna);
@@ -38,7 +38,7 @@ public class QuinceMagico {
     }
     
     public static boolean esPosible(int fila, int columna, int[][] tablero, int intento){
-      /*  boolean ok = true;
+      boolean ok = true;
         int aux = 0;
         //fila correcta
         
@@ -92,8 +92,8 @@ public class QuinceMagico {
         }
         
         
-        return ok;*/
-    	return true;
+        return ok;
+    	
     }
     
     public static int columnaSiguiente(int fila, int columna){
