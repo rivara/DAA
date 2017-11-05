@@ -19,7 +19,6 @@ una neutra con  n
 
 public class Hoja4E3 {
 	public static char analizarMatriz(int[][] m) {
-		//System.out.println("anchura"+m.length+"largura"+m[0].length);
 		return analizarDyV(m, 0, m.length - 1, 0, m[0].length - 1);
 	}
 
