@@ -18,9 +18,7 @@ una neutra con  n
   */
 
 public class Hoja4E3 {
-	public static char analizarMatriz(int[][] m) {
-		return analizarDyV(m, 0, m.length - 1, 0, m[0].length - 1);
-	}
+
 
 	private static char analizarDyV(int[][] m, int filaInf, int filaSup,
 			int colInf, int colSup) {
@@ -56,6 +54,9 @@ public class Hoja4E3 {
 			return ((r1 == r2) && (r1 == r3) && (r1 == r4) ? r1 : 'n');
 		}
 	}
+	public static char analizarMatriz(int[][] m) {
+		return analizarDyV(m, 0, m.length - 1, 0, m[0].length - 1);
+	}
 
 	public static void main(String[] args) {
 
@@ -63,6 +64,7 @@ public class Hoja4E3 {
 		//int arrayEntrada[][] = { { 0, -1, -2 }, { 1, 0, -1 } };
 		char r = analizarMatriz(arrayEntrada);
 		System.out.println("Tipo: " + r);
+	
 
 	}
 
