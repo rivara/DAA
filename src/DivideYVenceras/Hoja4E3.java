@@ -22,7 +22,7 @@ public class Hoja4E3 {
 
 	private static char analizarDyV(int[][] m, int filaInf, int filaSup,
 			int colInf, int colSup) {
-		if (filaInf == filaSup && colInf == colSup) {
+		if ((filaInf == filaSup) && (colInf == colSup)) {
 			if (colInf == 0 && colSup == 0)
 				return '0';
 			else if (m[filaInf][colInf] == filaInf + colInf){
